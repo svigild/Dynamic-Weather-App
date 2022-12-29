@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <div class="app-wrap">
+        <header>
+            <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city."></input>
+            <button class="submit-button" id="submit-button"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></input>
+        </header>
+        <main>
+            <section class="location">
+                <div class="city">Oviedo, ES</div>
+                <div class="date">Thursday 29 december 2022</div>
+            </section>
+            <div class="current">
+                <div class="temp">15<span>°C</span></div>
+                <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon"/>
+                <div class="weather">Sunny</div>
+                <div class="humidity">Humidity: 60%</div><br>
+                <div class="wind-speed">Wind Speed: 6.2 km/h</div>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
