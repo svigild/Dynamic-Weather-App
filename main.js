@@ -17,6 +17,21 @@ let weather = {
         let temperatureCelsius = (parseFloat(temp)-273.15).toFixed(1);
         document.querySelector(".temp").innerText = (temperatureCelsius) + "°C";
         document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?"+ name +"')";
+
+        let dateObj = new Date();
+        let month = dateObj.getUTCMonth() + 1; //months from 1-12
+        let day = dateObj.getUTCDate();
+        let year = dateObj.getUTCFullYear();
+
+        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        for (let i=0; i<months.length; i++){
+            if (month == i+1){
+                month = months[i];
+                break;
+            }
+        }
+        newdate = day + "th " +  month + ' ' +year;
+        document.querySelector(".date").innerText =  newdate;
     },
     search: function(){
         this.fetchWeather(document.querySelector(".search-box").value);
